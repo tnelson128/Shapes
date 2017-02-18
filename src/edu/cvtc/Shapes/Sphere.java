@@ -9,7 +9,7 @@ public class Sphere extends Shape {
 	
 	// this constructor creates a new cylinder object
 	public Sphere(float radius){
-		if(radius < 0){
+		if(radius <= 0){
 			// if either is less than zero we make a 1 radius sphere
 			setRadius(1);
 		}else{

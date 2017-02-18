@@ -47,42 +47,42 @@ public class Cuboid extends Shape {
 	/**
 	 * Gets the width of this Cuboid instance.
 	 */
-	private float getWidth() {
+	public float getWidth() {
 		return width;
 	}
 	
 	/**
 	 * Sets the width of this Cuboid instance.
 	 */
-	private void setWidth(float width) {
+	public void setWidth(float width) {
 		this.width = width;
 	}
 	
 	/**
 	 * Gets the height of this Cuboid instance.
 	 */
-	private float getHeight() {
+	public float getHeight() {
 		return height;
 	}
 	
 	/**
 	 * Sets the height of this Cuboid instance.
 	 */
-	private void setHeight(float height) {
+	public void setHeight(float height) {
 		this.height = height;
 	}
 	
 	/**
 	 * Gets the depth of this Cuboid instance.
 	 */
-	private float getDepth() {
+	public float getDepth() {
 		return depth;
 	}
 	
 	/**
 	 * Sets the depth of this Cuboid instance.
 	 */
-	private void setDepth(float depth) {
+	public void setDepth(float depth) {
 		this.depth = depth;
 	}
 	
@@ -92,7 +92,7 @@ public class Cuboid extends Shape {
 	 * Initializes a new instance of a Cuboid.
 	 */
 	public Cuboid(float width, float height, float depth) {
-		if(width < 0 || height < 0 || depth < 0) {
+		if(width <= 0 || height <= 0 || depth <= 0) {
 			// for now if any of the values are negative the contructor makes a 1 by 1 by 1 cuboid
 			setWidth(1);
 			setHeight(1);
@@ -115,7 +115,7 @@ public class Cuboid extends Shape {
 	 */
 	public float getSurfaceArea() {
 		// SA = 2(width+height+depth)
-		return 2 * (getWidth() + getDepth() + getHeight());
+		return 2 * (getWidth() * getDepth() + getDepth() * getHeight() + getHeight() * getWidth());
 	}
 
 	/**

@@ -12,7 +12,7 @@ public class Cylinder extends Shape {
 	
 	// this constructor creates a new cylinder object
 	public Cylinder(float radius, float height){
-		if(height < 0 || radius < 0){
+		if(height <= 0 || radius <= 0){
 			// if either is less than zero we make a 1 by 1 Cylinder
 			setHeight(1);
 			setRadius(1);
